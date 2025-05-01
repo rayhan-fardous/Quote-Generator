@@ -16,22 +16,13 @@ JavaScript
 API Ninjas Quotes API
 
 📂 Project Structure
-arduino
-Copy
-Edit
-random-quote-generator/
+
+quote-generator/
 ├── index.html
 ├── script.js
-├── style.css (optional)
+├── style.css 
 └── README.md
-⚙️ Setup Instructions
-Clone the repository (or download the files):
 
-bash
-Copy
-Edit
-git clone https://github.com/your-username/random-quote-generator.git
-cd random-quote-generator
 Get a free API key from API Ninjas.
 
 Insert your API key in script.js:
