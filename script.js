@@ -3,14 +3,26 @@ const quoteText = document.getElementById('quote');
 const authorText = document.getElementById('author');
 const newQuoteBtn = document.getElementById('new-quote');
 const twitterBtn = document.getElementById('twitter');
+const loader = document.getElementById('loader');
 
 const apiKey = 'rvJzZt54O4ZOqMBqSCzQyUEXx3B2HuNZgRVOgYRX';
 const apiUrl = 'https://api.api-ninjas.com/v1/quotes';
 
 
-
+function showLoadingSpinner() {
+    loader.hidden = false;
+    quoteContainer.hidden = true;
+}
+//Hide loading...
+function removeLoadingSpinner() {
+    if(!loader.hidden) {
+        quoteContainer.hidden = false;
+        loader.hidden = true;
+    }
+}
 // Load initial quote
 async function getQuote() {
+    showLoadingSpinner();
     try {
         const response = await fetch(apiUrl, {
             headers: {
@@ -27,9 +39,10 @@ async function getQuote() {
         else {
             quoteText.classList.remove('long-quote');
         }
-
         quoteText.textContent = quoteData.quote;
         authorText.textContent = quoteData.author || 'Unknown';
+        
+        removeLoadingSpinner();
     } catch (error) {
         quoteText.textContent = "Oops! Could not fetch quote.";
         authorText.textContent = "";
