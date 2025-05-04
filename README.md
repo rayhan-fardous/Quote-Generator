@@ -1,42 +1,30 @@
-📝 Random Quote Generator
-A simple web application that fetches and displays random inspirational quotes using the 'API Ninjas Quote' API. Users can also tweet the displayed quote directly from the app.
+# 📝 Random Quote Generator
 
-🚀 Features
-Fetches a random quote and author from a public API
+This is a simple and interactive web app that fetches a random quote from the [API Ninjas Quotes API](https://api-ninjas.com/api/quotes) and displays it on the screen. Users can also tweet the quote directly from the app.
 
-Responsive and minimal design
+## 🚀 Features
 
-Tweet the quote with one click
+- 🔄 Fetches a random quote from an external API
+- 👤 Displays the quote author (or "Unknown" if not provided)
+- 🐦 Share the quote on Twitter with one click
+- 📉 Shows a loader while the quote is being fetched
+- 📱 Responsive and clean UI
 
-🔧 Technologies Used
-HTML
-CSS
-JavaScript
+## 🛠️ Technologies Used
 
-API Ninjas Quotes API
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- [API Ninjas Quotes API](https://api-ninjas.com/api/quotes)
 
-📂 Project Structure
-
-quote-generator/
-├── index.html
-├── script.js
-├── style.css 
-└── README.md
-
-Get a free API key from API Ninjas.
-
-Insert your API key in script.js:
-
-javascript
-
-const apiKey = 'YOUR_API_KEY_HERE'; // Replace with your actual API key
-Open index.html in your browser to use the app.
-
-🖼️ Demo
-You can host this project,
-Example: https://rayhan-fardous.github.io/Quote-Generator/
-
-💡 Example Usage
+## 💡 Example Usage
 Click New Quote to fetch a new random quote.
 Click Tweet to share it on Twitter.
 
+## 💡 Notes
+- If the quote text is long (over 120 characters), a different font size is applied for better readability.
+-The app includes basic error handling for failed API requests.
+
+## 🖼️ Demo
+You can host this project,
+Example: https://rayhan-fardous.github.io/Quote-Generator/
